@@ -1,3 +1,5 @@
+package example
+
 interface Movable{
     fun move()
     fun stop(){
