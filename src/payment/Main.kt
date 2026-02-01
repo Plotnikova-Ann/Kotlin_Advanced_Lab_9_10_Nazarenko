@@ -29,8 +29,6 @@ fun main() {
         println("\nТест ${index + 1}: $payment")
         val result = processor.pay(payment)
         processor.show(result)
-
-        // Если это MasterCard в обработке, имитируем завершение
         if (result is PaymentResult.Processing) {
             println("   Завершаем обработку MasterCard...")
             val finalResult = processor.processMasterCardPayment("TRX-$index")
